@@ -3,17 +3,18 @@ package square
 import "math"
 
 type Point struct {
-	X, Y int
+	x, y int
 }
 
 type Square struct {
-	Point
-	a uint
+	start Point
+	a     uint
 }
 
 func (s Square) End() Point {
 	length := int(s.a)
-	return Point{s.X + length, s.Y + length}
+	return Point{s.start.x + length, s.start.y + length}
+	// implement me
 }
 
 func (s Square) Area() uint {
