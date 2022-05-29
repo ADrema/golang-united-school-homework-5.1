@@ -1,7 +1,5 @@
 package square
 
-import "math"
-
 type Point struct {
 	x, y int
 }
@@ -14,11 +12,11 @@ type Square struct {
 func (s Square) End() Point {
 	length := int(s.a)
 	return Point{s.start.x + length, s.start.y + length}
-	// implement me
 }
 
 func (s Square) Area() uint {
-	return uint(math.Sqrt(float64(s.a)))
+	length := s.a
+	return length * length
 }
 
 func (s Square) Perimeter() uint {
